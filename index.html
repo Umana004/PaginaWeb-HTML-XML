@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen sobre HTML y XML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HTML y XML: Estructuras, diferencias y aplicaciones</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#xml">XML</a></li>
+                <li><a href="#comparacion">Comparación</a></li>
+                <li><a href="#ejemplos">Ejemplos gráficos</a></li>
+                <li><a href="#reseña">Reseña personal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INTRODUCCIÓN -->
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <p>
+                Este sitio web tiene como propósito mostrar los conceptos fundamentales de los lenguajes
+                <strong>HTML</strong> (HyperText Markup Language) y <strong>XML</strong> (Extensible Markup Language),
+                basándose en las especificaciones oficiales:
+                <em>HTML Living Standard</em> y <em>XML 1.1 (Second Edition)</em>.
+            </p>
+            <p>
+                A lo largo de este documento se explican sus estructuras básicas, similitudes, diferencias
+                y ejemplos prácticos, reflejando el conocimiento adquirido sobre el uso correcto de estos lenguajes
+                de marcado.
+            </p>
+        </section>
+
+        <!-- HTML -->
+        <section id="html">
+            <h2>Estructura básica de un documento HTML</h2>
+
+            <article>
+                <h3>1. Infraestructura del documento</h3>
+                <p>
+                    Según la especificación <em>HTML Living Standard</em> (sección 4.1.1),
+                    todo documento HTML inicia con la declaración <code>&lt;!DOCTYPE html&gt;</code>,
+                    que indica al navegador que el archivo cumple con el estándar HTML5.
+                </p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ejemplo HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Encabezado principal&lt;/h1&gt;
+    &lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <p>
+                    Este formato define claramente la estructura jerárquica del documento:
+                    un elemento raíz <code>&lt;html&gt;</code> que contiene los elementos <code>&lt;head&gt;</code>
+                    y <code>&lt;body&gt;</code>.
+                </p>
+            </article>
+
+            <article>
+                <h3>2. Etiquetas más populares</h3>
+                <ul>
+                    <li><code>&lt;h1&gt;...&lt;/h1&gt;</code>: Encabezados de distintos niveles.</li>
+                    <li><code>&lt;p&gt;...&lt;/p&gt;</code>: Párrafos de texto.</li>
+                    <li><code>&lt;a&gt;...&lt;/a&gt;</code>: Enlaces a otras páginas.</li>
+                    <li><code>&lt;img&gt;</code>: Inserta imágenes.</li>
+                    <li><code>&lt;div&gt;</code> y <code>&lt;span&gt;</code>: Contenedores para agrupar contenido.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>3. Características principales</h3>
+                <ul>
+                    <li>Usa etiquetas predefinidas, no se pueden inventar nuevas.</li>
+                    <li>Está orientado a la visualización en navegadores.</li>
+                    <li>No distingue mayúsculas/minúsculas (aunque se recomienda minúsculas).</li>
+                    <li>Los navegadores son tolerantes a errores de sintaxis.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- XML -->
+        <section id="xml">
+            <h2>Estructura básica de un documento XML</h2>
+
+            <article>
+                <h3>1. Definición de un documento bien formado</h3>
+                <p>
+                    Según la especificación <em>XML 1.1 (Second Edition)</em>, sección 2.8,
+                    un documento XML se considera <strong>bien formado</strong> cuando:
+                </p>
+                <ul>
+                    <li>Tiene un único elemento raíz.</li>
+                    <li>Las etiquetas están correctamente anidadas y cerradas.</li>
+                    <li>Los atributos están entre comillas.</li>
+                    <li>No contiene errores de sintaxis.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>2. Infraestructura del documento</h3>
+                <p>La estructura general de un archivo XML es la siguiente:</p>
+                <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;libro&gt;
+    &lt;titulo&gt;Programación Web&lt;/titulo&gt;
+    &lt;autor&gt;Steven Umaña&lt;/autor&gt;
+    &lt;año&gt;2025&lt;/año&gt;
+&lt;/libro&gt;
+</code></pre>
+                <p>
+                    XML permite definir etiquetas personalizadas según el tipo de datos.
+                    Por ejemplo, en el ejemplo anterior, <code>&lt;libro&gt;</code> es el elemento raíz
+                    y dentro se definen los subelementos <code>&lt;titulo&gt;</code>, <code>&lt;autor&gt;</code> y <code>&lt;año&gt;</code>.
+                </p>
+            </article>
+
+            <article>
+                <h3>3. Características principales</h3>
+                <ul>
+                    <li>Las etiquetas son personalizables.</li>
+                    <li>Es sensible a mayúsculas y minúsculas.</li>
+                    <li>Está diseñado para almacenar y transportar información, no para mostrarla.</li>
+                    <li>Debe cumplir estrictamente las reglas de sintaxis.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- COMPARACIÓN -->
+        <section id="comparacion">
+            <h2>Diferencias y similitudes entre HTML y XML</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>HTML</th>
+                        <th>XML</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Propósito principal</td>
+                        <td>Mostrar información en navegadores web.</td>
+                        <td>Almacenar y transportar información estructurada.</td>
+                    </tr>
+                    <tr>
+                        <td>Etiquetas</td>
+                        <td>Predefinidas (ej. &lt;p&gt;, &lt;img&gt;).</td>
+                        <td>Definidas por el usuario (ej. &lt;persona&gt;, &lt;nombre&gt;).</td>
+                    </tr>
+                    <tr>
+                        <td>Sensibilidad a mayúsculas</td>
+                        <td>No sensible.</td>
+                        <td>Sensible (ej. &lt;Nombre&gt; ≠ &lt;nombre&gt;).</td>
+                    </tr>
+                    <tr>
+                        <td>Cierre de etiquetas</td>
+                        <td>Algunas no requieren cierre (ej. &lt;br&gt;).</td>
+                        <td>Todas deben cerrarse correctamente.</td>
+                    </tr>
+                    <tr>
+                        <td>Tolerancia a errores</td>
+                        <td>El navegador intenta corregirlos.</td>
+                        <td>Un error invalida todo el documento.</td>
+                    </tr>
+                    <tr>
+                        <td>Uso principal</td>
+                        <td>Diseño y presentación web.</td>
+                        <td>Intercambio de datos entre sistemas.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Similitudes</h3>
+            <ul>
+                <li>Ambos usan etiquetas y estructura jerárquica.</li>
+                <li>Ambos pueden incluir atributos en las etiquetas.</li>
+                <li>Ambos requieren una sintaxis bien formada.</li>
+                <li>Ambos son lenguajes de marcado, no de programación.</li>
+            </ul>
+        </section>
+
+        <!-- EJEMPLOS -->
+        <section id="ejemplos">
+            <h2>Ejemplos gráficos</h2>
+            <p>
+                A continuación, se muestran ejemplos propios de cómo lucen los archivos HTML y XML.
+                Estas imágenes fueron generadas por el autor y muestran la estructura descrita anteriormente.
+            </p>
+
+            <figure>
+                <img src="imagenes/ejemplo-html.png" alt="Ejemplo de documento HTML">
+                <figcaption>Ejemplo propio de un documento HTML básico.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagenes/ejemplo-xml.png" alt="Ejemplo de documento XML">
+                <figcaption>Ejemplo propio de un documento XML bien formado.</figcaption>
+            </figure>
+        </section>
+
+        <!-- RESEÑA -->
+        <section id="reseña">
+            <h2>Reseña académica y profesional</h2>
+            <p>
+                Soy estudiante de Ingeniería en Computación con interés en el desarrollo de software y la programación estructurada.
+                Me apasiona aprender sobre tecnologías de internet y comprender cómo se construyen las aplicaciones desde su base.
+            </p>
+            <p>
+                Aspiro a combinar conocimientos técnicos y creatividad para crear proyectos funcionales y accesibles,
+                aplicando buenas prácticas y estándares internacionales en el desarrollo de software.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>Referencias:</strong></p>
+        <ul>
+            <li>WHATWG (2025). <em>HTML Living Standard</em>. Recuperado de <a href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a></li>
+            <li>W3C (2006). <em>Extensible Markup Language (XML) 1.1 (Second Edition)</em>. Recuperado de <a href="https://www.w3.org/TR/xml11/">https://www.w3.org/TR/xml11/</a></li>
+        </ul>
+        <p>Autor: Steven Umaña López - 2025</p>
+    </footer>
+
+</body>
+</html>
+
